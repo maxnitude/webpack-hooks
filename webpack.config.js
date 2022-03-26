@@ -1,18 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
+// hooks
 const EnvironmentPlugin = require('./plugins/environment');
 const EntryOptionPlugin = require('./plugins/entryOption');
 
-
 const isDev = process.env.NODE_ENV === 'development';
-const HOOK =process.env.HOOK
 const isProd = !isDev;
+const HOOK = process.env.HOOK;
 
 const optimization = () => {
   const config = {
@@ -93,7 +92,7 @@ const addPlugins = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
 
-  mode: 'development',
+  mode: isDev ? 'development' : 'production',
 
   entry: {
     main: ['@babel/polyfill', './index.js'],
