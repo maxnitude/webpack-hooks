@@ -7,15 +7,15 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 // hooks plugins
 const EnvironmentPlugin = require('./plugins/0_environment');
-const AfterEnvironmentPlugin = require('./plugins/1_afterEnvironment');
-const EntryOptionPlugin = require('./plugins/2_entryOption');
-const AfterPluginsPlugin = require('./plugins/3_afterPlugins');
-const AfterResolverslugin = require('./plugins/4_afterResolvers');
-const InitializePlugin = require('./plugins/5_initialize');
-const BeforeRunPlugin = require('./plugins/6_beforeRun');
-const RunPlugin = require('./plugins/7_run');
-const WatchRunPlugin = require('./plugins/8_watchRun');
-const NormalModuleFactoryPlugin = require('./plugins/9_normalModuleFactory');
+const AfterEnvironmentPlugin = require('./plugins/01_afterEnvironment');
+const EntryOptionPlugin = require('./plugins/02_entryOption');
+const AfterPluginsPlugin = require('./plugins/03_afterPlugins');
+const AfterResolverslugin = require('./plugins/04_afterResolvers');
+const InitializePlugin = require('./plugins/05_initialize');
+const BeforeRunPlugin = require('./plugins/06_beforeRun');
+const RunPlugin = require('./plugins/07_run');
+const WatchRunPlugin = require('./plugins/08_watchRun');
+const NormalModuleFactoryPlugin = require('./plugins/09_normalModuleFactory');
 const ContextModuleFactoryPlugin = require('./plugins/10_contextModuleFactory');
 const BeforeCompilePlugin = require('./plugins/11_beforeCompile');
 const CompilePlugin = require('./plugins/12_compile');
